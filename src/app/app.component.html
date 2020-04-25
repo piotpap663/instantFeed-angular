@@ -1,0 +1,31 @@
+<div class='wrapper'>
+  <div class='con'>
+    <div class='header mainLogo'>
+      <a routerLink="/">
+        <img src="src/resources/icons/instagram_icon.svg">
+      </a>
+    </div>
+    <div class='header search w-50'>
+      <input type="text" placeholder="Szukaj" />
+    </div>
+    <div class='header flexEnd'>
+      <nav class='actionButtons'>
+        <a routerLink='/addPost'>
+          <button>Add post</button>
+        </a>
+        <a routerLink="user/">
+          <button>Profile</button>
+        </a>
+        <a routerLink='/explore'>
+          <button>Explore</button>
+        </a>
+
+        <a routerLink='/logout'>
+          <button>Wyloguj</button>
+        </a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
