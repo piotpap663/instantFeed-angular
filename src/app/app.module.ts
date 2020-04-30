@@ -8,7 +8,7 @@ import authReducer from '../reducers/auth.js';
 import postsReducer from '../reducers/posts.js';
 import { AddPostComponent } from './add-post/add-post.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent } from './app/app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EntryPageComponent } from './entry-page/entry-page.component';
 import { ExploreComponent } from './explore/explore.component';
@@ -19,6 +19,7 @@ import { PostHeaderComponent } from './post/post-header/post-header.component';
 import { PostComponent } from './post/post.component';
 import { PostsWrapperComponent } from './posts-wrapper/posts-wrapper.component';
 import { UserPageComponent } from './user-page/user-page.component';
+import { HeaderComponent } from './header/header.component';
 
 export interface AuthState {
   user: string;
@@ -60,7 +61,8 @@ const rootReducer = combineReducers<IAppState>({
     PostInfoComponent,
     AddPostComponent,
     ExploreComponent,
-    UserPageComponent
+    UserPageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
