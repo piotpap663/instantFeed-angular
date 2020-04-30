@@ -1,0 +1,27 @@
+<div *ngIf="postUser" class="header">
+  <a routerLink="{{'/user/'+postAuthorId}}">
+    <img *ngIf="postUser.avatar" class="headerLogo" src="{{postUser.avatar}}" alt="" />
+    <span *ngIf="!postUser.avatar">👱</span>
+    <span class="author">
+      {{postUser.user}}
+    </span>
+  </a>
+  <div class="timestamp">
+    {{postCreatedAt | date:'dd.LL.yyyy, HH:mm:ss'}}
+  </div>
+  <ng-container *ngIf="postAuthorId === userId">
+    <app-post-header-remove [postId]='postId'></app-post-header-remove>
+  </ng-container>
+  <ng-container *ngIf="postAuthorId !== userId">
+    <ng-container *ngIf="subscribers.includes(postAuthorId)">
+      <div class="unSubscribeUser">
+        <button (click)="handleUnsubscribe($event)">{{"Subskrybujesz"}}</button>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!subscribers.includes(postAuthorId)">
+      <div class="subscribeUser">
+        <button (click)="handleSubscribe($event)">{{"Subskrybuj"}}</button>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

@@ -1,5 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { NgRedux } from '@angular-redux/store';
 import { Injectable } from '@angular/core';
+
+import { IAppState } from './app.module';
 
 
 @Injectable({
@@ -7,23 +9,14 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private ngRedux: NgRedux<IAppState>) { }
 
   public isAuthenticated(): boolean {
-    // const userData = localStorage.getItem('userInfo');
-    // if (userData && JSON.parse(userData)) {
-    //   return true;
-    // }
-    // return false;
-    return true;
+    if (this.ngRedux.getState().auth.user) {
+      return true;
+    }
+    return false;
   }
 
-  public setUserInfo(user) {
-    localStorage.setItem('userInfo', JSON.stringify(user));
-  }
-
-  public validate(email, password) {
-    return this.http.post('/api/login', { user: email, password }).toPromise();
-    // return false;
-  }
 }

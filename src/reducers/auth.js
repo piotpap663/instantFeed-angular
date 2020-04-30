@@ -1,10 +1,10 @@
 const initialState = {
   user: 'piotr',
-  id: '5e7647c45897a60e114c2c15',
+  id: '5ea58dc614589d2080fc7ce8',
   permission: 'USER',
-  subscribers: ['5e765fc65897a60e114c2c16']
+  subscribers: ['5ea5a5e501e6392fc561f8fe']
 }
-export default (state = initialState, action) => {
+export default (state = {}, action) => {
   switch (action.type) {
     case 'LOGIN':
       return {

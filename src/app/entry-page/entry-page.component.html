@@ -1,24 +1,17 @@
-<div className="box-layout">
-  <div className="box-layout__box">
-    <button className="button" (click)="switchToLoginOrRegister()">
-      {{!showLoginPage ? "Załóż konto" : null}}
-      {{showLoginPage ? "Logowanie" : null}}
+<div class="box-layout">
+  <div class="box-layout__box">
+    <button class="button" (click)="switchToLoginOrRegister()">
+      {{!showLoginPage ? "Logowanie" : null}}
+      {{showLoginPage ? "Załóż konto" : null}}
     </button>
-    <form className="form" (submit)="handleSubmit($event)">
+    <div class="form">
       <label>Username:</label>
       <input type="text" name="user" value={{userName}} (change)="handleChangeName($event)" />
       <label>Password:</label>
       <input type="password" name="password" value={{userPassword}} (change)="handleChangePassword($event)" />
-      <ng-container *ngIf="showLoginPage">
-        <label>Email:</label>
-        <input type="email" name="email" value={{userEmail}} (change)="handleChangeEmail($event)" />
-      </ng-container>
-      <button *ngIf="!showLoginPage" className="button" type="submit">
-        Zaloguj
+      <button class="button" (click)="showLoginPage ? login() : register()">
+        {{showLoginPage? 'Zaloguj' : 'Zarejestruj'}}
       </button>
-      <button *ngIf="showLoginPage" className="button" type="submit">
-        Zarejestruj
-      </button>
-    </form>
+    </div>
   </div>
 </div>

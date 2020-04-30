@@ -1,0 +1,25 @@
+<div class='postInfo'>
+  <div class='icons'>
+    <div>
+      <button (click)="clickLike()" [ngClass]="[isLikedByMe() ? 'liked': '', 'likeButton']">
+        {{isLikedByMe() ? "Lubisz to" : "Lubię to!"}}
+      </button>
+    </div>
+    <div>
+    </div>
+  </div>
+  <div class='likes'>Liczba polubień: {{postLikes && postLikes.length}}</div>
+  <div class='info'>
+    <button class='showMoreComments'>
+      Zobacz wszystkie komentarze: 71
+    </button>
+    <div class='commentsPanel'>
+      <div class='addComment'>
+        <textarea placeholder="Dodaj komentarz"></textarea>
+        <div>
+          <button>Opublikuj</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
