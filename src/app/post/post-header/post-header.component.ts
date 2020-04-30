@@ -20,7 +20,6 @@ export class PostHeaderComponent implements OnInit {
   @Input() postCreatedAt = 'X';
   @Input() postAuthorId = 'X';
   userId;
-  defaultAvatar = '❤️';
   subscribers;
 
   ngOnInit(): void {

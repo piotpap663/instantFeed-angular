@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="container">
 
-    <app-post-header [postId]='post._id' [postUser]='post.user || defaultUser' [postCreatedAt]='post.createdAt'
+    <app-post-header [postId]='post._id' [postUser]='post.user || defaultUser' [postCreatedAt]='post.created_at'
       [postAuthorId]='post.authorId'>
     </app-post-header>
     <app-post-content [postText]="post.text" [postImages]='post.images'></app-post-content>

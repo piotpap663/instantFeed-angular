@@ -1,17 +1,19 @@
-<div class="box-layout">
-  <div class="box-layout__box">
-    <button class="button" (click)="switchToLoginOrRegister()">
-      {{!showLoginPage ? "Logowanie" : null}}
-      {{showLoginPage ? "Załóż konto" : null}}
-    </button>
-    <div class="form">
+<div class="entryPage">
+  <button class="button" (click)="switchToLoginOrRegister()">
+    {{!showLoginPage ? "Logowanie" : null}}
+    {{showLoginPage ? "Załóż konto" : null}}
+  </button>
+  <div class="form">
+    <div class="loginForm">
       <label>Username:</label>
       <input type="text" name="user" value={{userName}} (change)="handleChangeName($event)" />
+    </div>
+    <div class="loginForm">
       <label>Password:</label>
       <input type="password" name="password" value={{userPassword}} (change)="handleChangePassword($event)" />
-      <button class="button" (click)="showLoginPage ? login() : register()">
-        {{showLoginPage? 'Zaloguj' : 'Zarejestruj'}}
-      </button>
     </div>
+    <button class="login" (click)="showLoginPage ? login() : register()">
+      {{showLoginPage? 'Zaloguj' : 'Zarejestruj'}}
+    </button>
   </div>
 </div>

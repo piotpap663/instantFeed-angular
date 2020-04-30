@@ -1,5 +1,5 @@
 import { NgRedux } from '@angular-redux/store';
-import { AfterViewChecked, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 import { setPosts } from '../../actions/posts.js';
 import { ApiCallService } from '../api-call.service';
@@ -10,7 +10,7 @@ import { IAppState } from '../app.module';
   templateUrl: './posts-wrapper.component.html',
   styleUrls: ['./posts-wrapper.component.scss'],
 })
-export class PostsWrapperComponent implements OnInit, AfterViewChecked {
+export class PostsWrapperComponent implements OnInit, AfterViewInit {
   subscribers;
   userId;
   posts;
@@ -37,7 +37,7 @@ export class PostsWrapperComponent implements OnInit, AfterViewChecked {
         );
     }
   }
-  ngAfterViewChecked() {
+  ngAfterViewInit() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',

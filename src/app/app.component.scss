@@ -24,6 +24,16 @@
         justify-content: center;
         align-self: center;
 
+        a {
+          button {
+            margin: 0px .3em;
+            border-radius: 5px;
+            border: 1px solid beige;
+            padding: 0.5em;
+            background: gainsboro;
+          }
+        }
+
         &.mainLogo {
           display: flex;
           justify-content: flex-start;

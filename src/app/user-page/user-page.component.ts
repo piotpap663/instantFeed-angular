@@ -1,5 +1,5 @@
 import { NgRedux } from '@angular-redux/store';
-import { AfterViewChecked, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { setPosts } from '../../actions/posts.js';
@@ -10,7 +10,7 @@ import { IAppState, PostsState } from '../app.module';
   templateUrl: './user-page.component.html',
   styleUrls: ['./user-page.component.scss']
 })
-export class UserPageComponent implements OnInit, AfterViewChecked {
+export class UserPageComponent implements OnInit, AfterViewInit {
 
   subscribers: Array<string> = [];
   userId: string;
@@ -44,7 +44,7 @@ export class UserPageComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  ngAfterViewChecked() {
+  ngAfterViewInit() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',

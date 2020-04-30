@@ -1,7 +1,7 @@
 <div *ngIf="postUser" class="header">
   <a routerLink="{{'/user/'+postAuthorId}}">
-    <img *ngIf="postUser.avatar" class="headerLogo" src="{{postUser.avatar}}" alt="" />
-    <span *ngIf="!postUser.avatar">👱</span>
+    <img class="headerLogo" src="{{postUser.avatar || '../../../assets/icons/user.png'}}" alt="" />
+    <!-- <span *ngIf="!postUser.avatar">👱</span> -->
     <span class="author">
       {{postUser.user}}
     </span>
