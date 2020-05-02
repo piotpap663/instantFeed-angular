@@ -57,12 +57,11 @@ export class EntryPageComponent {
         if (response && response.info) {
           alert(response.info || 'Nieprawidłowe dane');
         } else {
-          this.updateUserInRedux(
-            response.user,
-            response._id,
-            response.permission,
-            response.subscribers
-          );
+          if (response.info) {
+            alert(response.info);
+          } else {
+            alert(`Dodano usera: ${this.userName}`);
+          }
         }
       });
   }
