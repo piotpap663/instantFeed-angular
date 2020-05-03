@@ -18,7 +18,6 @@ import { PostHeaderRemoveComponent } from './post/post-header/post-header-remove
 import { PostHeaderComponent } from './post/post-header/post-header.component';
 import { PostInfoComponent } from './post/post-info/post-info.component';
 import { PostComponent } from './post/post.component';
-import { PostsWrapperComponent } from './posts-wrapper/posts-wrapper.component';
 import { UserPageComponent } from './user-page/user-page.component';
 
 export interface AuthState {
@@ -54,7 +53,6 @@ const rootReducer = combineReducers<IAppState>({
     DashboardComponent,
     EntryPageComponent,
     PostComponent,
-    PostsWrapperComponent,
     PostHeaderComponent,
     PostHeaderRemoveComponent,
     PostContentComponent,

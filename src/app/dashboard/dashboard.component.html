@@ -1,1 +1,3 @@
-<app-posts-wrapper></app-posts-wrapper>
+<div class="wrapper">
+  <app-post *ngFor="let p of posts" [post]="p"></app-post>
+</div>
