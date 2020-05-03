@@ -12,14 +12,14 @@ import { AppComponent } from './app/app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EntryPageComponent } from './entry-page/entry-page.component';
 import { ExploreComponent } from './explore/explore.component';
-import { PostContentComponent } from './post-content/post-content.component';
-import { PostInfoComponent } from './post-info/post-info.component';
+import { HeaderComponent } from './header/header.component';
+import { PostContentComponent } from './post/post-content/post-content.component';
 import { PostHeaderRemoveComponent } from './post/post-header/post-header-remove/post-header-remove.component';
 import { PostHeaderComponent } from './post/post-header/post-header.component';
+import { PostInfoComponent } from './post/post-info/post-info.component';
 import { PostComponent } from './post/post.component';
 import { PostsWrapperComponent } from './posts-wrapper/posts-wrapper.component';
 import { UserPageComponent } from './user-page/user-page.component';
-import { HeaderComponent } from './header/header.component';
 
 export interface AuthState {
   user: string;

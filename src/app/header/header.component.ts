@@ -24,8 +24,9 @@ export class HeaderComponent implements OnInit {
   }
 
   logoutUser() {
-    this.apiCall.logoutUser();
-    this.ngRedux.dispatch(logout());
+    this.apiCall.logoutUser().then(() => {
+      this.ngRedux.dispatch(logout());
+    });
   }
 
 }

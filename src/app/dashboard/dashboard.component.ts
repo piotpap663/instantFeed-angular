@@ -1,4 +1,4 @@
-import { NgRedux, select } from '@angular-redux/store';
+import { NgRedux } from '@angular-redux/store';
 import { Component, OnInit } from '@angular/core';
 
 import { IAppState } from '../app.module';
@@ -9,17 +9,7 @@ import { IAppState } from '../app.module';
 })
 export class DashboardComponent implements OnInit {
   constructor(private ngRedux: NgRedux<IAppState>) { }
-
-  @select(['auth', 'user']) user;
-
   ngOnInit(): void {
-
-    // setTimeout(() => {
-    //   this.ngRedux.dispatch({ type: 'LOGIN', user: 5 });
-    // }, 3000);
-  }
-  callRedux() {
-
   }
 
 }

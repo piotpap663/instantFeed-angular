@@ -1,10 +1,10 @@
 import { NgRedux } from '@angular-redux/store';
 import { Component, Input, OnInit } from '@angular/core';
 
-import { setPosts } from '../../actions/posts.js';
-import { getLikedPosts } from '../../services/helpers.js';
-import { ApiCallService } from '../api-call.service';
-import { IAppState } from '../app.module';
+import { setPosts } from '../../../actions/posts.js';
+import { getLikedPosts } from '../../../services/helpers.js';
+import { ApiCallService } from '../../api-call.service';
+import { IAppState } from '../../app.module';
 
 @Component({
   selector: 'app-post-info',
