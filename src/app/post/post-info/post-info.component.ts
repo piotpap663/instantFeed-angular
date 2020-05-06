@@ -17,6 +17,7 @@ export class PostInfoComponent implements OnInit {
   @Input() postAuthorId;
   @Input() postLiked;
   @Input() postComments;
+  @Input() postCreatedAt;
   userId;
   posts;
   constructor(

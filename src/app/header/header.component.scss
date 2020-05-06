@@ -1,68 +1,29 @@
 @import '../../resources/scss/variables';
 
-:host {
-  .wrapper {
+.wrapper {
 
-    position: sticky;
+  position: sticky;
+  display: flex;
+  top: 0;
+  background: $headerColor;
+  z-index: 1;
+  border-bottom: $headerBorder;
+
+  .con {
     display: flex;
-    top: 0;
-    background: $headerColor;
-    z-index: 1;
-    border-bottom: $headerBorder;
-
-    .con {
-      display: flex;
-      max-width: 1010px;
-      width: 100%;
-      height: 52px;
-      margin: 0 auto;
-      padding: 0 20px;
-      justify-content: center;
+    height: 52px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 
 
-      .header {
-        justify-content: center;
-        align-self: center;
-
-        a {
-          button {
-            margin: 0px .3em;
-            border-radius: 5px;
-            border: 1px solid beige;
-            padding: 0.5em;
-            background: gainsboro;
-          }
-        }
-
-        &.mainLogo {
-          display: flex;
-          justify-content: flex-start;
-        }
-
-        &.search {
-          input {
-            &::placeholder {
-              text-align: center;
-            }
-
-            width: 215px;
-          }
-
-        }
-
-        &.flexEnd {
-          display: flex;
-          justify-content: flex-end;
-
-        }
-
-        svg {
-          margin-left: 30px;
-        }
-
-        .actionButtons {
-          justify-content: center;
-        }
+    a {
+      button {
+        margin: 0px .3em;
+        border-radius: 5px;
+        border: 1px solid beige;
+        padding: 0.5em;
+        background: gainsboro;
       }
     }
   }

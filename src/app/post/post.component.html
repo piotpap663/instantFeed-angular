@@ -1,11 +1,10 @@
 <div class="wrapper">
   <div class="container">
 
-    <app-post-header [postId]='post._id' [postUser]='post.user || defaultUser' [postCreatedAt]='post.created_at'
-      [postAuthorId]='post.authorId'>
+    <app-post-header [postId]='post._id' [postUser]='post.user || defaultUser' [postAuthorId]='post.authorId'>
     </app-post-header>
     <app-post-content [postText]="post.text" [postImages]='post.images'></app-post-content>
-    <app-post-info [postId]='post._id' [postLikes]='post.likes' [postAuthorId]='post.authorId' [postLiked]='post.liked'
-      [postComments]='post.comments'></app-post-info>
+    <app-post-info [postCreatedAt]='post.created_at' [postId]='post._id' [postLikes]='post.likes'
+      [postAuthorId]='post.authorId' [postLiked]='post.liked' [postComments]='post.comments'></app-post-info>
   </div>
 </div>

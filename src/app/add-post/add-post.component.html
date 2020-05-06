@@ -1,14 +1,14 @@
-<div>
+<div class="addPost">
   <p *ngIf="uploaded">{{uploadedText}}</p>
   <form *ngIf="!uploaded" (submit)="onFormSubmit($event)">
 
-    <h1>File Upload</h1>
+    <h1>Dodawanie posta</h1>
     <input type="file" (change)="onChange($event)" />
 
     <textarea name="text" id="text" cols="30" rows="10" (change)="handleText($event)" defaultValue="text"></textarea>
     <div class="errors">{{errors.toString()}}</div>
 
-    <button type="submit">Upload</button>
+    <button type="submit">Dodaj post</button>
   </form>
   {{errors}}
 </div>

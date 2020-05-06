@@ -12,6 +12,7 @@ import { IAppState } from '../app.module';
 })
 export class HeaderComponent implements OnInit {
   isAuthenticated = false;
+  userId;
   constructor(
     private ngRedux: NgRedux<IAppState>,
     private apiCall: ApiCallService,
@@ -20,6 +21,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.ngRedux.select(['auth', 'user']).subscribe(user => {
       this.isAuthenticated = !!user;
+    });
+    this.ngRedux.select(['auth', 'id']).subscribe(id => {
+      this.userId = id;
     });
   }
 

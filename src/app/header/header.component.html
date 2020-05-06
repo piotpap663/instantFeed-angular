@@ -1,28 +1,24 @@
 <div class='wrapper'>
   <div class='con'>
-    <div class='header mainLogo'>
-      <a routerLink="/dashboard">
-        <button>Home</button>
+    <a routerLink="/dashboard">
+      <button>Home</button>
+    </a>
+    <nav class='actionButtons'>
+      <a routerLink='/addPost'>
+        <button>Dodaj post</button>
       </a>
-    </div>
-    <div class='header search w-50'>
-      <input type="text" placeholder="Szukaj" />
-    </div>
-    <div class='header flexEnd'>
-      <nav class='actionButtons'>
-        <a routerLink='/addPost'>
-          <button>Add post</button>
-        </a>
-        <a routerLink='/explore'>
-          <button>Explore</button>
-        </a>
-        <a *ngIf="isAuthenticated" routerLink='/login' (click)="logoutUser()">
-          <button>Wyloguj</button>
-        </a>
-        <a *ngIf="!isAuthenticated" routerLink='/login'>
-          <button>Zaloguj</button>
-        </a>
-      </nav>
-    </div>
+      <a routerLink='/explore'>
+        <button>Odkryj</button>
+      </a>
+      <a :routerLink="{{'/user/' + userId}}">
+        <button>Moje</button>
+      </a>
+      <a *ngIf="isAuthenticated" routerLink='/login' (click)="logoutUser()">
+        <button>Wyloguj</button>
+      </a>
+      <a *ngIf="!isAuthenticated" routerLink='/login'>
+        <button>Zaloguj</button>
+      </a>
+    </nav>
   </div>
 </div>

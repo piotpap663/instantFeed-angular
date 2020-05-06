@@ -10,16 +10,8 @@
   </div>
   <div class='likes'>Liczba polubień: {{postLikes && postLikes.length}}</div>
   <div class='info'>
-    <button class='showMoreComments'>
-      Zobacz wszystkie komentarze: 71
-    </button>
-    <div class='commentsPanel'>
-      <div class='addComment'>
-        <textarea placeholder="Dodaj komentarz"></textarea>
-        <div>
-          <button>Opublikuj</button>
-        </div>
-      </div>
+    <div class="timestamp">
+      Dodano: {{postCreatedAt | date:'dd.LL.yyyy, HH:mm:ss'}}
     </div>
   </div>
 </div>

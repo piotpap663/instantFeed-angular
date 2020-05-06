@@ -6,9 +6,6 @@
       {{postUser.user}}
     </span>
   </a>
-  <div class="timestamp">
-    {{postCreatedAt | date:'dd.LL.yyyy, HH:mm:ss'}}
-  </div>
   <ng-container *ngIf="postAuthorId === userId">
     <app-post-header-remove [postId]='postId'></app-post-header-remove>
   </ng-container>

@@ -6,7 +6,6 @@ import {
   ENDPOINT_GET_ALL_POSTS_EXCEPT_USER,
   ENDPOINT_GET_POSTS,
   ENDPOINT_GET_USER_POSTS,
-  ENDPOINT_GET_USER_SUBSCRIBERS,
   ENDPOINT_LIKE,
   ENDPOINT_LOGOUT,
   ENDPOINT_REGISTER,
@@ -39,12 +38,6 @@ export class ApiCallService {
   removePostById = (postId) => this.http.post(ENPOINT_REMOVE_POST, {
     params: {
       postId
-    }
-  }).toPromise()
-
-  getUserSubscribers = (userId) => this.http.get(ENDPOINT_GET_USER_SUBSCRIBERS, {
-    params: {
-      userId
     }
   }).toPromise()
 
