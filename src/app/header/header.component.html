@@ -10,7 +10,7 @@
       <a routerLink='/explore'>
         <button>Odkryj</button>
       </a>
-      <a :routerLink="{{'/user/' + userId}}">
+      <a routerLink="{{'/user/' + userId}}">
         <button>Moje</button>
       </a>
       <a *ngIf="isAuthenticated" routerLink='/login' (click)="logoutUser()">
