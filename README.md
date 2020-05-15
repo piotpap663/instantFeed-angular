@@ -1,3 +1,10 @@
+## How to run project ?
+Run mongoDB and server [https://github.com/piotpap663/instantFeed-server](https://github.com/piotpap663/instantFeed-server)
+
+`yarn install` then 
+
+`yarn start`
+
 # InstantFeedAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
